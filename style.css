@@ -1,0 +1,1000 @@
+<>
+      /* إعدادات عامة */
+      :root {
+        --primary-gold: #cfa052;
+        --dark-bg: #1c1c1e;
+        --light-bg: #fdfdfd;
+        --text-gray: #e0e0e0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Tajawal", sans-serif;
+      }
+
+      body {
+        background-color: var(--light-bg);
+        color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* --- شريط التنقل (Navbar) --- */
+     Header {
+      
+   
+    background-color: #cfa052;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black; /* تم إضافة الفاصلة المنقوطة هنا */
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--primary-gold);
+}
+
+.logo span {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px; /* قللنا المسافة شوية عشان الأزرار بتاخد مساحة أكبر من النص */
+}
+
+/* التعديلات هنا لتحويل الروابط لأزرار */
+nav ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+    text-decoration: none;
+    padding: 8px 20px; /* مساحة داخلية تعمل شكل الزرار */
+    border-radius: 8px; /* حواف دائرية */
+    border: 1px solid transparent; /* إطار شفاف عشان الزرار ميكبرش فجأة لما نعمل هوفر */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--primary-gold); /* خلفية الزرار */
+    color: white; /* لون النص جوه الزرار */
+    border: 1px solid var(--primary-gold); /* إطار بلون الزرار */
+}
+
+     /* .lang-selector {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 8px 15px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        color: white;
+        transition: 0.3s;
+      }*/
+       
+
+      .lang-selector:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* --- القسم الرئيسي (Hero Section) --- */
+      .hero {
+       
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+          url("f3941e93963f2067173ca0bf0cb5cc23.jpg")
+            center/cover no-repeat;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        padding: 0 5%;
+        color: white;
+        position: relative;
+      }
+
+      .hero-content {
+        max-width: 600px;
+      }
+
+      .hero h1 {
+        font-size: 60px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .hero h3 {
+        color: var(--primary-gold);
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      .hero p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        color: var(--text-gray);
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 20px;
+      }
+
+      .btn {
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.3s;
+        border: 1px solid transparent;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-gold);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #b88d44;
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border-color: white;
+        color: white;
+      }
+
+      .btn-outline:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      /* --- أيقونة الفاصل --- */
+      .divider-icon {
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color:rgb(182, 173, 161);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        color: var(--primary-gold);
+        font-size: 24px;
+        z-index: 2;
+      }
+
+      /* --- قسم المميزات (Features Section) --- */
+      .features-section {
+        padding: 80px 5% 50px;
+        text-align: center;
+        background-color #cfa052;
+      }
+
+      .features-section h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #111;
+      }
+
+      .title-decoration {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+
+      .title-decoration span {
+        width: 40px;
+        height: 2px;
+        background-color: var(--primary-gold);
+      }
+      .title-decoration i {
+        color: var(--primary-gold);
+        font-size: 8px;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 40px 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+        transition: transform 0.3s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 20px;
+        background-color: #fdf8f2;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--primary-gold);
+        font-size: 28px;
+      }
+
+      .feature-card h4 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #222;
+      }
+
+      .feature-card p {
+        color: #666;
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      /* --- استجابة الشاشات (Responsive) --- */
+      @media (max-width: 992px) {
+        nav ul {
+          display: none; /* يمكن إضافة قائمة جانبية للموبايل لاحقاً */
+        }
+        .hero h1 {
+          font-size: 45px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 36px;
+        }
+        .hero-buttons {
+          flex-direction: column;
+        }
+        .btn {
+          justify-content: center;
+        }
+      }
+        /* --- تنسيقات خاصة بالصفحات الفرعية --- */
+
+.subpage-header {
+    height: 45vh; /* أقصر من الصفحة الرئيسية */
+    background: linear-gradient(var(--dark-overlay), var(--dark-overlay)), 
+                url('https://images.unsplash.com/photo-1558588942-930faae5a389?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+    margin-top: 70px; /* لتعويض الهيدر الثابت */
+    background: url(A_breathtaking_cinematic_view_of_202605081411.jpeg);
+
+}
+
+.subpage-header h1 {
+    font-size: 50px;
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+}
+
+/* --- شبكة الكروت (Places Grid) --- */
+.content-section {
+    padding: 60px 5%;
+    background-color: #f4f4f4;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center; /* لتوسيط الكروت في المساحات الكبيرة */
+}
+
+.place-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    max-width: 380px; /* تحديد عرض الكارت لضمان التوسيط */
+}
+
+.place-card:hover {
+    transform: translateY(-10px);
+}
+
+.place-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.place-info {
+    padding: 25px;
+}
+
+.category {
+    font-size: 13px;
+    color: var(--primary-gold);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.place-info h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #222;
+}
+
+.place-info p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    height: 72px; /* توحيد ارتفاع النصوص */
+    overflow: hidden;
+}
+
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-gold);
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.read-more-btn:hover {
+    gap: 12px;
+    color: #b88d44;
+}
+/* --- تصميم سيكشن الأنشطة (Zig-Zag) --- */
+
+
+.activities-hero {
+
+    background-image: linear-gradient(var(--dark-overlay), var(--dark-overlay)), 
+                      url(1f91b3d6bb53554dccd91a5293ea576f.jpg);
+                     color:black;
+
+}
+
+.activities-section {
+    padding: 80px 10%;
+    background-color: #cfa052;
+}
+
+.activity-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+/* عكس الاتجاه لكل صف زوجي */
+.activity-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.activity-image {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px var(--primary-gold); /* ظل ديكوري ذهبي */
+}
+
+.activity-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.5s;
+    display: block;
+}
+
+.activity-row:hover .activity-image img {
+    transform: scale(1.1);
+}
+
+.activity-text {
+    flex: 1;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #fdf8f2;
+    color: var(--primary-gold);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.activity-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.activity-text p {
+    font-size: 18px;
+    color:white;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.activity-perks {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.activity-perks li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color:white;
+    margin-bottom: 10px;
+}
+
+.activity-perks i {
+    color: var(--primary-gold);
+}
+
+/* استجابة الموبايل */
+@media (max-width: 992px) {
+    .activity-row, .activity-row:nth-child(even) {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .activity-image {
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .activity-perks li {
+        justify-content: center;
+    }
+}
+
+/* --- تنسيقات سيكشن المطاعم --- */
+
+.restaurants-section {
+    padding: 80px 5%;
+    background-color: #cfa052;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    color:black;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color:bla;
+    font-size: 18px;
+}
+
+.restaurants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.restaurant-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.res-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.res-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: var(--primary-gold);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.res-info {
+    padding: 25px;
+}
+
+.res-type {
+    color: var(--primary-gold);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.res-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.res-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.res-rating i {
+    color: #ffc107;
+}
+
+.res-rating span {
+    color: #999;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.res-info p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 20px;
+    height: 48px;
+    overflow: hidden;
+}
+
+.res-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.res-features span {
+    font-size: 12px;
+    color: #888;
+    background: #f9f9f9;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.res-features i {
+    color: var(--primary-gold);
+}
+
+.btn-link {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.btn-link:hover {
+    gap: 10px;
+}
+/* --- سيكشن الغرف بتصميم الـ Reveal --- */
+.rooms-section {
+    padding: 80px 5%;
+    background: white; /* خلفية داكنة لإبراز الغرف */
+    color: #fff;
+}
+
+.rooms-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.room-card {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.room-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    transform: translateY(120px); /* إخفاء نصف المحتوى */
+    transition: transform 0.5s ease;
+}
+
+.room-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease 0.1s; /* تأخير بسيط للأنيميشن */
+}
+
+/* --- الأنيـميـشن عند الـ Hover --- */
+.room-card:hover .room-overlay {
+    transform: translateY(0);
+}
+
+.room-card:hover .room-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.room-card:hover .room-image {
+    transform: scale(1.1); /* تكبير الصورة ببطء */
+}
+
+/* --- تفاصيل المحتوى --- */
+.room-category {
+    background: var(--primary-gold);
+    color: #000;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.room-content h3 {
+    font-size: 26px;
+    margin: 15px 0;
+    color: var(--primary-gold);
+}
+
+.room-features {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.room-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+.room-price {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.room-price span {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.room-btn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid var(--primary-gold);
+    color: var(--primary-gold);
+    font-weight: 700;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.room-btn:hover {
+    background: var(--primary-gold);
+    color: #000;
+}
+
+/* توافق الموبايل */
+@media (max-width: 480px) {
+    .room-card { height: 400px; }
+    .room-overlay { transform: translateY(0); } /* إظهار المحتوى دائماً في الموبايل */
+    .room-content { opacity: 1; transform: translateY(0); }
+}
+    
+
+/* --- سيكشن عن الأقصر --- */
+.about-luxor-section {
+    padding: 100px 8%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-text-content {
+    flex: 1;
+}
+
+.sub-title {
+    color: var(--primary-gold);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-text-content h2 {
+    font-size: 42px;
+    color: #222;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.about-text-content h2 span {
+    color: var(--primary-gold);
+}
+
+.about-text-content p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* الأرقام والإحصائيات */
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: #fdf8f2;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.stat-item:hover {
+    background: var(--primary-gold);
+    transform: translateY(-5px);
+}
+
+.stat-item:hover h3, .stat-item:hover p {
+    color: #fff;
+}
+
+.stat-number {
+    font-size: 28px;
+    color: var(--primary-gold);
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 14px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+/* الزر */
+.btn-discover {
+    padding: 15px 40px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-discover:hover {
+    background: var(--primary-gold);
+    letter-spacing: 1px;
+}
+
+/* الصور والأنيميشن البصري */
+.about-visuals {
+    flex: 1;
+    position: relative;
+}
+
+.main-img-wrapper {
+    width: 100%;
+    height: 450px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* شكل عضوي مميز */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    animation: morphing 10s infinite alternate;
+}
+
+.img-main {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-badge {
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: float
+
+
+
+    
+/* --- سيكشن تواصل معنا --- */
+.contact-section {
+    padding: 100px 8%;
+    background-color: #fff;
+}
+
+.contact-container {
+    display: flex;
+    gap: 50px;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+.contact-box {
+    padding: 50px;
+}
+
+/* صندوق المعلومات (اليسار/اليمين حسب اللغة) */
+.info-box {
+    flex: 1;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.gold-tag {
+    color: var(--gold);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.info-box h2 {
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.info-box h2 span { color: var(--gold); }
+
+.contact-methods {
+    margin-top: 40px;
+}
+
+.method-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.method-card i {
+    width: 50px;
+    height: 50px;
+    background: rgba(207, 160, 82, 0.1);
+    color: var(--gold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.method-card h4 { font-size: 16px; margin-bottom: 3px; }
+.method-card p { color: #aaa; font-size: 14px; }
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
